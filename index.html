@@ -6,63 +6,68 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+	
 	  <h1> Embauchez-Moi!</h1>
-    <form method="post" action="cible.php">
-	 
-     <fieldset>
-       <legend>1. Vos informations Personnelles</legend>
-       <br>
-		<label>Nom<span class="obligatoire">*</span>:</label>
-		<input type="text" name="Name" required="required">
-		</br>
-		<br>
-		<label>Prenom<span class="obligatoire">*</span>:</label>
-		<input type="text" name="Surname" required="required">
-		</br>
-		<br>
-		<label>Date de naissance<span class="obligatoire">*</span>:</label>
-		<input type="Date" name="date" required="required">
-		</br>
-		</br>
-		<label> Adresse:</label>
-		<input type="text" name="adress">
-		</br>
-		<br>
-		<label> Code postal:</label>
-		<input type="text" name="cp">
-		</br>
-		<br>
-		<label> Ville<span class="obligatoire">*</span>:</label>
-		<input type="text" name="city" required="required">
-		</br>
-		<br>
-		<label> Tel:</label>
-		<input type="tel" name="phone">
-		</br>
-		<br>
-		<label> Site web:</label>
-		<input type="url" name="web">
-		</br>
-		<br>
-		<label> Réseaux sociaux:</label>
-		<input type="url" name="reseau">
-	  </fieldset>
-      <br>
-	 <fieldset>
-	   <legend> 2. Joindre Fichier</legend>
-       <br>
-       <label> Photo de profil:</label>
-       <input type="file" name="photo">
-       <label> Format (jpeg, png)</label>
-       </br>
-       <br>
-        <label> Autres fichiers:</label>
-       <input type="file" name="autrefichier">
-       <label> Format (pdf)</label>
-        </br>
-       <input type="submit" value="Valider">
 
-	  </fieldset>
-		</form>
+      <form method="post" action="cible.php" enctype="multipart/form-data">
+	 
+       <fieldset>
+	       <legend>1. Vos informations Personnelles</legend>
+	        <br>
+			<label>Nom<span class="obligatoire">*</span>:</label>
+			<input type="text" name="Name" required="required">
+			</br>
+			<br>
+			<label>Prenom<span class="obligatoire">*</span>:</label>
+			<input type="text" name="Surname" required="required">
+			</br>
+			<br>
+			<label>Date de naissance<span class="obligatoire">*</span>:</label>
+			<input type="Date" name="date" required="required">
+			</br>
+			</br>
+			<label> Adresse:</label>
+			<input type="text" name="adress">
+			</br>
+			<br>
+			<label> Code postal:</label>
+			<input type="text" name="cp">
+			</br>
+			<br>
+			<label> Ville<span class="obligatoire">*</span>:</label>
+			<input type="text" name="city" required="required">
+			</br>
+			<br>
+			<label> Tel:</label>
+			<input type="tel" name="phone">
+			</br>
+			<br>
+			<label> Site web:</label>
+			<input type="url" name="web">
+			</br>
+			<br>
+			<label> Réseaux sociaux:</label>
+			<input type="url" name="reseau">
+	    </fieldset>
+
+      <br>
+
+	    <fieldset>
+		  <legend> 2. Joindre Fichier</legend>
+	       <br>
+	       <label> Photo de profil:</label>
+	       <input type="file" name="photo">
+	       <label> Format (jpeg, png)</label>
+	       </br>
+	       <br>
+	        <label> Autres fichiers:</label>
+	       <input type="file" name="autrefichier">
+	       <label> Format (pdf)</label>
+	        </br>
+	        
+	       <input type="submit" value="Valider">
+
+	    </fieldset>
+	  </form>
 	</body>
 </html>

@@ -19,10 +19,10 @@ catch (Exception $e)
 
 if (!empty($_POST['nom']) && !empty($_POST['niveau'])){
 
-$stmt = $bdd->prepare('INSERT INTO COMPETENCES(nom,niveau, description)
-        VALUES (:nom, :niveau, :description)');
+$stmt = $bdd->prepare('INSERT INTO COMPETENCES(id_candidat,nom,niveau, description)
+        VALUES (:id_candidat, :nom, :niveau, :description)');
 
-    $stmt->execute (array('nom'=>$_POST['nom'], 'niveau'=>$_POST['niveau'] , 'description'=> $_POST['description']));
+    $stmt->execute (array('id_candidat'=>$_SESSION['candidat'],'nom'=>$_POST['nom'], 'niveau'=>$_POST['niveau'] , 'description'=> $_POST['description']));
 
     echo "votre compétence à bien été enregistrée.";
 
